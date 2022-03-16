@@ -1,7 +1,7 @@
 const Restaurant = require("./restaurant")
+const Menu = require("./menu")
+const item = require("./items")
 
 
 
-Restaurant.init()
-
-new Restaurant("Mannys", "https:Mannys.jpeg")
+module.exports = {Restaurant, Menu, item}
