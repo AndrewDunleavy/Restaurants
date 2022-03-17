@@ -1,5 +1,6 @@
+const path = require("path")
 const items = require("./items.js")
-const db = require("better-sqlite3")('./restaurants.sqlite')
+const db = require("better-sqlite3")(path.join(__dirname, 'restaurants.sqlite'))
 class Menu {
     static init = function() {
         db.prepare('CREATE TABLE IF NOT EXISTS menus (id INTEGER PRIMARY KEY, title TEXT);').run() 

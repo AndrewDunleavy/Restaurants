@@ -1,5 +1,7 @@
+const path = require("path")
+
 const Menu = require("./menu")
-const db = require("better-sqlite3")('./restaurants.sqlite')
+const db = require("better-sqlite3")(path.join(__dirname, 'restaurants.sqlite'))
 
 class Restaurant {
     static all = []
