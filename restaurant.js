@@ -6,7 +6,7 @@ class Restaurant {
     static init = function () {
         db.prepare('CREATE TABLE IF NOT EXISTS restaurants (id INTEGER PRIMARY KEY, name TEXT, imageURL TEXt);').run()
        
-        db.prepare('CREATE TABLE IF NOT EXISTS items (ID  INTEGER PRIMARY KEY, name TEXT,  price TEXT);').run()
+        
         const restaurants = db.prepare('SELECT * FROM restaurants;').all()
         restaurants.forEach(restaurant => {
             const { name, imageURL, id} = restaurant

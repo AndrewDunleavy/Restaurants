@@ -1,8 +1,8 @@
 const items = require("./items.js")
-
+const db = require("better-sqlite3")('./restaurants.sqlite')
 class Menu {
     static init = function() {
-        db.prepare('CREATE TABLE IF NOT EXISTS menu (id INTEGER PRIMARY KEY, title TEXT);').run() 
+        db.prepare('CREATE TABLE IF NOT EXISTS menus (id INTEGER PRIMARY KEY, title TEXT);').run() 
     }
     constructor(restaurant_id, title, id){
         this.restaurant_id = restaurant_id
